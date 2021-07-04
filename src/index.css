@@ -1,13 +1,130 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+  font-family: Arial;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  padding: 60px;
+  background: rgb(238, 238, 238);
+}
+
+input[type = "text"]{
+    width: 100%;
+    padding: 5px;
+    font-size: 20pt;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  width:100%;
+  justify-content: center;
+  align-items: center;
+}
+.Img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 230px;
+  height: 300px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.Img > .conten{
+    width: 90%;
+    height: 90%;
+    border: 2px solid gray;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Img > .conten > .pp{
+      width: 100%;
+      background: black;
+}
+
+.Img > .conten > .pp > p{
+    text-align: center;
+    color: white;
+}
+
+.Img > .conten > .imgg{
+    width: 100%;
+    height: 100%;
+    background: rgb(118, 118, 255);
+}
+
+.Img > .conten > .imgg > img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+  
+}
+
+.Img:hover{
+  transform: scale(1.03); 
+}
+.Img:active{
+  transform: scale(0.99); 
+}
+
+.allcon .row:first-child{
+  background: red;
+}
+
+.load{
+  font-size: 15pt;
+  font-weight: bolder;
+}
+
+.modal{
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.5);
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.modal > .showImg{
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+    border: 2px solid black;
+    height: 50%;
+    width: 50%;
+}
+
+.modal > .showImg > img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    
+}
+
+footer{
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+footer > * {
+  margin: 10px;
+}
+footer > hr{
+  width: 100%;
+}
+footer > p{
+  font-weight: bold;
+  font-size: 15pt;
 }
